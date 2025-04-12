@@ -1,5 +1,5 @@
 # mitchellshaw
-🔴 Live: https://mitchellshaw.github.io  
+🔴 Live: https://mitchelljshaw.github.io/mitchellshaw/
 
 📑 Portfolio: Mitchell Shaw  
 🧑‍💻 Career: Aspiring software developer 
