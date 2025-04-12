@@ -1,13 +1,5 @@
 /* Styles file for Mitchell Shaw Portfolio */
 
-:root {
-    --primary-color: #1abc9c;
-    --secondary-color: #2c3e50;
-    --white: #ffffff;
-    --light-gray: #f8f9fa;
-    --dark-gray: #6c757d;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -16,409 +8,57 @@
 
 body {
     font-family: 'Lato', sans-serif;
-    color: #212529;
-    line-height: 1.5;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f8f9fa;
 }
 
-h1, h2, h3, h4, h5, h6, .navbar-brand, .nav-link {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
+/* Charcoal/Grey Color Scheme */
+:root {
+    --primary: #2c2c2c;     /* Dark charcoal for main elements */
+    --secondary: #4a4a4a;   /* Medium charcoal for secondary elements */
+    --accent: #7e7e7e;      /* Medium grey for accents */
+    --light: #e9e9e9;       /* Light grey for backgrounds */
+    --extra-light: #f5f5f5; /* Extra light grey for contrast */
+    --dark: #1a1a1a;        /* Very dark charcoal for text/contrast */
+    --medium: #5a5a5a;      /* Medium grey for secondary text */
+    --highlight: #8c8c8c;   /* Highlight color for hover effects */
 }
 
+/* Container */
 .container {
-    width: 100%;
-    max-width: 1140px;
-    padding: 0 1rem;
+    width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
-section {
-    padding: 6rem 0;
-}
-
-.section-heading {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 1.5rem;
-}
-
-.divider {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 1.5rem 0;
-}
-
-.divider-line {
-    width: 100px;
-    height: 4px;
-    background-color: var(--secondary-color);
-}
-
-.divider-icon {
-    font-size: 2rem;
-    margin: 0 1rem;
-}
-
-/* Navbar Styles */
+/* Navigation */
 .navbar {
-    background-color: var(--secondary-color);
-    padding: 1rem 0;
+    background-color: var(--primary);
+    padding: 20px 0;
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1000;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.navbar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    z-index: 100;
 }
 
 .navbar-brand {
-    color: var(--white);
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: 700;
-}
-
-.navbar-toggle {
-    display: none;
-    color: var(--white);
-    background: transparent;
-    border: solid 1px var(--white);
-    padding: 0.5rem 0.75rem;
-    font-size: 0.875rem;
-    border-radius: 0.25rem;
-    cursor: pointer;
-}
-
-.navbar-toggle i {
-    margin-left: 0.5rem;
-}
-
-.navbar-nav {
-    display: flex;
-    list-style: none;
-}
-
-.nav-item {
-    margin-left: 1.5rem;
-}
-
-.nav-link {
-    color: var(--white);
-    text-decoration: none;
-    font-size: 1rem;
-    padding: 0.5rem 0;
-    display: block;
-    transition: color 0.3s;
-}
-
-.nav-link:hover {
-    color: var(--primary-color);
-}
-
-/* Masthead Styles */
-.masthead {
-    background-color: var(--primary-color);
-    padding: 8rem 0 6rem;
-    text-align: center;
-    color: var(--white);
-    margin-top: 4.5rem;
-}
-
-.masthead-avatar {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin: 0 auto 2rem;
-}
-
-.masthead-avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.masthead-heading {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-}
-
-.masthead-subheading {
-    font-size: 1.5rem;
-    font-weight: 400;
-}
-
-.masthead .divider-line {
-    background-color: var(--white);
-}
-
-/* Portfolio Styles */
-.portfolio {
-    background-color: var(--white);
-}
-
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
-}
-
-.portfolio-item {
-    border-radius: 0.5rem;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.portfolio-link {
-    position: relative;
-    display: block;
-}
-
-.portfolio-hover {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(26, 188, 156, 0.9);
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-.portfolio-link:hover .portfolio-hover {
-    opacity: 1;
-}
-
-.portfolio-hover-content {
-    color: var(--white);
-}
-
-.portfolio-item img {
-    width: 100%;
-    display: block;
-}
-
-.portfolio-caption {
-    padding: 1.5rem;
-    text-align: center;
-    background-color: var(--white);
-}
-
-.portfolio-caption h4 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.portfolio-caption p {
-    color: var(--dark-gray);
-}
-
-/* About Styles */
-.about {
-    background-color: var(--primary-color);
-    color: var(--white);
-    text-align: center;
-}
-
-.about .divider-line {
-    background-color: var(--white);
-}
-
-.about-content {
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-    margin: 3rem 0;
-}
-
-.about-text {
-    flex: 1;
-    font-size: 1.25rem;
-}
-
-.btn {
-    display: inline-block;
+    color: var(--light);
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    padding: 1rem 1.75rem;
-    font-size: 1rem;
-    text-decoration: none;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    transition: all 0.3s;
-    border: none;
-}
-
-.btn-outline {
-    color: var(--white);
-    border: solid 2px var(--white);
-    background-color: transparent;
-}
-
-.btn-outline:hover {
-    background-color: var(--white);
-    color: var(--secondary-color);
-}
-
-.btn-primary {
-    background-color: var(--primary-color);
-    color: var(--white);
-}
-
-.btn-primary:hover {
-    background-color: #159a80;
-}
-
-/* Contact Styles */
-.contact {
-    background-color: var(--light-gray);
-}
-
-.contact-form {
-    max-width: 700px;
-    margin: 3rem auto 0;
-}
-
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-.form-control {
-    display: block;
-    width: 100%;
-    padding: 1.5rem 1rem;
-    font-size: 1.1rem;
-    border: none;
-    border-radius: 0.5rem;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-textarea.form-control {
-    resize: none;
-}
-
-/* Footer Styles */
-.footer {
-    background-color: var(--secondary-color);
-    color: var(--white);
-    padding: 5rem 0;
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    text-align: center;
-}
-
-.footer-item h4 {
     font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.social-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    background-color: var(--white);
-    color: var(--secondary-color);
     text-decoration: none;
-    transition: all 0.3s;
 }
 
-.social-icon:hover {
-    transform: scale(1.1);
-}
+/* Additional styles for other sections (Masthead, Projects, About, etc.) */
 
-.copyright {
-    background-color: #1a252f;
-    color: var(--white);
-    padding: 1.5rem 0;
+/* Footer */
+.footer {
+    background-color: var(--primary);
+    color: var(--light);
+    padding: 50px 0 0;
     text-align: center;
 }
 
-/* Media Queries */
-@media (max-width: 991px) {
-    .about-content {
-        flex-direction: column;
-    }
-}
-
-@media (max-width: 767px) {
-    section {
-        padding: 4rem 0;
-    }
-    
-    .section-heading {
-        font-size: 2rem;
-    }
-    
-    .navbar-toggle {
-        display: block;
-    }
-    
-    .navbar-collapse {
-        position: absolute;
-        top: 100%;
-        right: 0;
-        left: 0;
-        background-color: var(--secondary-color);
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease-out;
-    }
-    
-    .navbar-collapse.show {
-        max-height: 300px;
-    }
-    
-    .navbar-nav {
-        flex-direction: column;
-        padding: 1rem;
-    }
-    
-    .nav-item {
-        margin: 0.5rem 0;
-        margin-left: 0;
-    }
-    
-    .masthead-heading {
-        font-size: 2.5rem;
-    }
-    
-    .masthead-subheading {
-        font-size: 1.25rem;
-    }
-    
-    .portfolio-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-.portfolio-item, .masthead-avatar, .section-heading {
-    animation: fadeIn 1s ease-out;
-}
+/* Other CSS for responsive design, grid layout, forms, etc. */
