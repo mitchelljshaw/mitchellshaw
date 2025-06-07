@@ -162,6 +162,79 @@ body {
     flex-wrap: wrap;
 }
 
+/* Hero Profile Image */
+.profile-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%; /* Makes the image a circle */
+    margin: 0 auto var(--space-xl);
+    display: block;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    box-shadow: var(--shadow-xl);
+    transition: var(--transition);
+    object-fit: cover; /* Prevents the image from stretching if not square */
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+
+/* Experience Section Logos */
+.job-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-md);
+}
+
+.company-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-sm);
+    object-fit: contain; /* Ensures the whole logo is visible */
+    background: white;
+    padding: 5px;
+}
+
+.job-info {
+    flex: 1;
+}
+
+
+/* Teams/Organizations Section Logos */
+.teams-section {
+    text-align: center;
+    margin-top: var(--space-xl);
+}
+
+.teams-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-xl);
+    flex-wrap: wrap;
+    margin-top: var(--space-lg);
+}
+
+.team-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    background: white;
+    padding: 10px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+}
+
+.team-logo:hover {
+    transform: scale(1.1);
+    box-shadow: var(--shadow-lg);
+}
+
 /* Buttons */
 .btn {
     display: inline-flex;
